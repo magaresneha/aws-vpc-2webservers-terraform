@@ -1,12 +1,12 @@
 # AWS VPC with Two Web Servers using Terraform
 
-## Overview
+ Overview
 
 This project provisions an AWS networking environment and two Apache web servers using **Terraform (Infrastructure as Code)**.
 
-The infrastructure includes a custom VPC, public subnet, Internet Gateway, route table, security group, and two EC2 instances. Apache is automatically installed and configured on both instances using **EC2 User Data**.
+The infrastructure includes a custom VPC, public subnet, Internet Gateway, route table, security group, and two EC2 instances. Apache is automatically installed and configured on both instances using EC2 User Data.
 
-## Architecture
+Architecture
 
 ```text
                     AWS
@@ -24,7 +24,7 @@ The infrastructure includes a custom VPC, public subnet, Internet Gateway, route
    "Web Server 1"       "Web Server 2"
 ```
 
-## Technologies
+Technologies
 
 - Terraform
 - AWS VPC
@@ -33,7 +33,7 @@ The infrastructure includes a custom VPC, public subnet, Internet Gateway, route
 - Apache HTTP Server
 - Terraform S3 Remote Backend
 
-## Project Structure
+Project Structure
 
 ```text
 aws-vpc-2webservers-terraform/
@@ -45,7 +45,7 @@ aws-vpc-2webservers-terraform/
 └── README.md
 ```
 
-## Infrastructure
+Infrastructure
 
 - Custom AWS VPC
 - Public subnet with internet access
@@ -56,13 +56,13 @@ aws-vpc-2webservers-terraform/
 - Remote Terraform state stored in Amazon S3
 - S3 state locking using `use_lockfile`
 
-## Deployment
+Deployment
 
 ```bash
 terraform init
 terraform validate
 terraform plan
-terraform apply
+terraform apply --auto-approve
 ```
 
 Terraform outputs the public IP addresses of both web servers. The deployed websites can then be accessed using:
@@ -72,12 +72,12 @@ http://<web-server-1-public-ip>
 http://<web-server-2-public-ip>
 ```
 
-## Cleanup
+Cleanup
 
 ```bash
-terraform destroy
+terraform destroy --auto-approve
 ```
 
-## Author
+Author
 
-**Sneha Magare**
+Sneha Magare
