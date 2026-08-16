@@ -1,0 +1,7 @@
+region            = "ap-south-1"
+ami               = "ami-035827357e3c7e810"
+instance_type     = "t3.micro"
+key_name          = "linuxkey"
+vpc_cidr          = "192.168.1.0/24"
+subnet_cidr       = "192.168.1.0/25"
+availability_zone = "ap-south-1a"
